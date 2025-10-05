@@ -1,0 +1,404 @@
+/* styles/brutalist.css */
+@import "tailwindcss";
+
+body{
+  background-color: #E8DCC4;
+}
+
+:root {
+  --brown-900: #5D4037;
+  --brown-800: #6D4C41;
+  --brown-700: #8B4513;
+  --brown-600: #A0522D;
+  --brown-500: #CD853F;
+  --beige-200: #F5F5DC;
+  --beige-100: #FFF8DC;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background-color: var(--brown-700);
+  border-radius: 0%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+/* Brutalist Text Styles */
+.brutalist-text-main {
+  @apply text-6xl md:text-8xl font-black uppercase tracking-tighter;
+  color: var(--brown-900);
+  text-shadow: 4px 4px 0px var(--brown-500),
+               8px 8px 0px rgba(0, 0, 0, 0.1);
+  line-height: 0.9;
+}
+
+.brutalist-text-sub {
+  @apply text-2xl md:text-4xl font-bold uppercase tracking-widest;
+  color: var(--brown-700);
+  letter-spacing: 0.5em;
+}
+
+/* Brutalist Buttons */
+.brutalist-btn-primary {
+  @apply px-8 py-4 font-bold uppercase tracking-wider text-lg;
+  background-color: var(--beige-200);
+  color: var(--brown-900);
+  border: 3px solid var(--brown-900);
+  box-shadow: 6px 6px 0px var(--brown-900);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brutalist-btn-primary:hover {
+  box-shadow: 3px 3px 0px var(--brown-900);
+  transform: translate(3px, 3px);
+}
+
+.brutalist-btn-menu {
+  @apply w-12 h-12 flex items-center justify-center;
+  background-color: var(--beige-200);
+  border: 2px solid var(--brown-900);
+  box-shadow: 3px 3px 0px var(--brown-900);
+}
+
+/* Menu Icon Animation */
+.menu-icon {
+  @apply relative w-6 h-6;
+}
+
+.menu-icon span {
+  @apply absolute block w-full h-0.5;
+  background-color: var(--brown-900);
+  transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) { top: 4px; }
+.menu-icon span:nth-child(2) { top: 11px; }
+.menu-icon span:nth-child(3) { top: 18px; }
+
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+/* Navigation Items */
+.brutalist-nav-item {
+  @apply block w-full text-left py-4 px-2 mb-2 font-bold uppercase text-xl;
+  color: var(--brown-900);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.brutalist-nav-item:hover,
+.brutalist-nav-item.active {
+  border-bottom: 2px solid var(--brown-900);
+  background-color: rgba(93, 64, 55, 0.1);
+}
+
+/* Brutalist Grid Background */
+.brutalist-hero {
+  background: linear-gradient(135deg, var(--beige-200) 0%, var(--beige-100) 100%);
+}
+
+.grid-item {
+  background-color: var(--brown-900);
+  opacity: 0;
+}
+
+/* Scrollbar Brutalism */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--beige-200);
+  border: 2px solid var(--brown-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brown-700);
+  border: 2px solid var(--brown-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown-900);
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--brown-700);
+  color: var(--beige-200);
+}
+
+::-moz-selection {
+  background-color: var(--brown-700);
+  color: var(--beige-200);
+}
+
+/* Additional Brutalist Styles */
+.brutalist-text-section {
+  @apply text-5xl md:text-7xl font-black uppercase tracking-tighter;
+  color: var(--brown-900);
+  text-shadow: 3px 3px 0px var(--brown-500),
+               6px 6px 0px rgba(0, 0, 0, 0.1);
+  line-height: 0.9;
+}
+
+.brutalist-btn-resume {
+  @apply px-6 py-3 font-bold uppercase tracking-wider text-base;
+  background-color: var(--brown-900);
+  color: var(--beige-200);
+  border: 3px solid var(--brown-900);
+  box-shadow: 6px 6px 0px var(--beige-200);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brutalist-btn-resume:hover {
+  box-shadow: 3px 3px 0px var(--beige-200);
+  transform: translate(3px, 3px);
+}
+
+.brutalist-filter-btn {
+  @apply px-4 py-2 font-bold uppercase tracking-wide text-sm;
+  background-color: var(--beige-200);
+  color: var(--brown-700);
+  border: 2px solid var(--brown-700);
+  transition: all 0.3s ease;
+}
+
+.brutalist-filter-btn.active,
+.brutalist-filter-btn:hover {
+  background-color: var(--brown-700);
+  color: var(--beige-200);
+}
+
+.brutalist-project-card {
+  background-color: var(--beige-100);
+  border: 4px solid var(--brown-900);
+  box-shadow: 8px 8px 0px var(--brown-900);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brutalist-btn-secondary {
+  @apply px-4 py-2 font-bold uppercase tracking-wider text-sm;
+  background-color: transparent;
+  color: var(--brown-900);
+  border: 2px solid var(--brown-900);
+  transition: all 0.3s ease;
+}
+
+.brutalist-btn-secondary:hover {
+  background-color: var(--brown-900);
+  color: var(--beige-200);
+}
+
+.brutalist-input {
+  @apply w-full px-4 py-3 font-mono;
+  background-color: var(--beige-200);
+  border: 3px solid var(--brown-900);
+  color: var(--brown-900);
+  transition: all 0.3s ease;
+}
+
+.brutalist-input:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--brown-900);
+  transform: translate(-2px, -2px);
+}
+
+.brutalist-input::placeholder {
+  color: var(--brown-500);
+}
+
+.brutalist-social-link {
+  @apply flex items-center justify-center py-3 px-4 font-bold uppercase tracking-wide text-sm;
+  background-color: var(--beige-200);
+  color: var(--brown-900);
+  border: 2px solid var(--brown-900);
+  transition: all 0.3s ease;
+}
+
+/* Skill bar animations */
+.skill-bar {
+  transform-origin: left;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .brutalist-text-main {
+    @apply text-4xl;
+    text-shadow: 2px 2px 0px var(--brown-500),
+                 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brutalist-text-section {
+    @apply text-3xl;
+    text-shadow: 2px 2px 0px var(--brown-500),
+                 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brutalist-text-sub {
+    @apply text-xl;
+    letter-spacing: 0.3em;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .brutalist-app {
+    color-scheme: light;
+  }
+}
+
+
+/* Enhanced HeroName Styles */
+.letter {
+  transition: all 0.3s ease;
+  position: relative;
+  text-shadow: 8px 8px 0 rgba(62, 39, 35, 0.3);
+}
+
+.letter::before {
+  content: attr(data-char);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: rgba(139, 69, 19, 0.3);
+  z-index: -1;
+}
+
+/* Grid line animations */
+.grid-line {
+  transform-origin: left center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .letter {
+    text-shadow: 4px 4px 0 rgba(62, 39, 35, 0.3);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .letter {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .grid-line {
+    animation: none !important;
+  }
+}
+
+/* Custom selection color */
+.letter::selection {
+  background: #8B4513;
+  color: #F5E6D3;
+}
+
+.letter::-moz-selection {
+  background: #8B4513;
+  color: #F5E6D3;
+}
+
+/* styles/brutalist-hero.css */
+.brutalist-hero {
+  position: relative;
+  background: #E8DCC4;
+}
+
+/* Brutalist shadow effects */
+.brutalist-shadow {
+  box-shadow: 8px 8px 0px #3E2723;
+}
+
+.brutalist-shadow-hover {
+  box-shadow: 12px 12px 0px #3E2723;
+}
+
+/* Text highlight effects */
+.brutalist-text-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.brutalist-text-highlight::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(62, 39, 35, 0.3);
+  z-index: -1;
+}
+
+/* Image frame styling */
+.brutalist-image-frame {
+  position: relative;
+  border: 6px solid #3E2723;
+  background: #F5E6D3;
+  padding: 4px;
+  box-shadow: 12px 12px 0px #3E2723;
+}
+
+.brutalist-image {
+  filter: grayscale(100%) contrast(120%);
+  mix-blend-mode: multiply;
+}
+
+/* Grid item animations */
+.grid-item {
+  transform-origin: center;
+}
+
+/* Custom cursor area */
+/* .brutalist-hero * {
+  cursor: none;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brutalist-shadow {
+    box-shadow: 4px 4px 0px #3E2723;
+  }
+  
+  .brutalist-shadow-hover {
+    box-shadow: 6px 6px 0px #3E2723;
+  }
+  
+  .brutalist-image-frame {
+    border-width: 4px;
+    box-shadow: 6px 6px 0px #3E2723;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .grid-item,
+  .brutalist-image-frame,
+  .brutalist-shadow {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
