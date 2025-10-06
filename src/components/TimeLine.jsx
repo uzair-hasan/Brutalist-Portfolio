@@ -247,17 +247,7 @@ export default function Timeline() {
           </div>
 
           {/* Start/End Markers */}
-          <div className="flex justify-between items-center mt-12 px-8">
-            <div className="text-center">
-              <div className="w-8 h-8 bg-[#3E2723] border-2 border-[#E8DCC4] mx-auto mb-2"></div>
-              <span className="font-['Space_Mono'] text-[#3E2723] font-bold text-sm">START</span>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-8 h-8 bg-[#8B4513] border-2 border-[#E8DCC4] mx-auto mb-2"></div>
-              <span className="font-['Space_Mono'] text-[#3E2723] font-bold text-sm">PRESENT</span>
-            </div>
-          </div>
+      
         </div>
 
         {/* Call to Action */}
