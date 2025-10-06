@@ -232,7 +232,7 @@ export default function About() {
                     </div>
                   </div>
                   <p className="font-['Space_Mono'] text-xl font-bold text-center">
-                    OPEN FOR RADICAL PROJECTS
+                    OPEN TO CREATIVE OPPORTUNITIES 
                   </p>
                   <div className="flex justify-center mt-4">
                     <div className="w-3/4 h-1 bg-[#F5E6D3] opacity-30"></div>
