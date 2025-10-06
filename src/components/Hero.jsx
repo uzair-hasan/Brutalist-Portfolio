@@ -245,7 +245,7 @@ export default function Hero() {
           border-4 border-[#3E2723] font-['Space_Mono'] font-bold brutalist-shadow"
           >
             <Terminal className="w-5 h-5" />
-            <span>FULL STACK DEVELOPER</span>
+            <span>SOFTWARE DEVELOPER</span>
           </div>
         </motion.div>
 
